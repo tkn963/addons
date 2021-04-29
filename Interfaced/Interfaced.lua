@@ -5,14 +5,10 @@ local main = function()
     TargetFrame:ClearAllPoints()
     TargetFrame:SetPoint("CENTER", 350, 100)
 
-    PartyMemberFrame1:SetScript("OnEvent", nil);
-    PartyMemberFrame1:Hide()
-    PartyMemberFrame2:SetScript("OnEvent", nil);
-    PartyMemberFrame2:Hide()
-    PartyMemberFrame3:SetScript("OnEvent", nil);
-    PartyMemberFrame3:Hide()
-    PartyMemberFrame4:SetScript("OnEvent", nil);
-    PartyMemberFrame4:Hide()
+    for i = 1, 4 do
+        local frame = _G["PartyMemberFrame"..i]
+        frame:SetScript("OnShow", frame.Hide)
+    end
 end
 
 local ef = CreateFrame("frame")

@@ -9,6 +9,22 @@ local main = function()
         local frame = _G["PartyMemberFrame"..i]
         frame:SetScript("OnShow", frame.Hide)
     end
+
+    if (PetFrame) then
+        PetFrame:ClearAllPoints()
+        PetFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 59, 52)
+    end
+
+    if (TotemFrame) then
+        TotemFrame:ClearAllPoints()
+        TotemFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 45, 48)
+    end
+
+    CastingBarFrame:SetScale(0.65)
+    CastingBarFrameBorder:SetTexture(nil)
+    CastingBarFrame:ClearAllPoints()
+    CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, -40)
+    CastingBarFrame.SetPoint = function() end
 end
 
 local ef = CreateFrame("frame")

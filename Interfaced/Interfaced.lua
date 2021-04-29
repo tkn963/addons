@@ -22,6 +22,7 @@ local main = function()
 
     CastingBarFrame:SetScale(0.65)
     CastingBarFrameBorder:SetTexture(nil)
+    CastingBarFrameFlash:SetTexture(nil)
     CastingBarFrame:ClearAllPoints()
     CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, -40)
     CastingBarFrame.SetPoint = function() end

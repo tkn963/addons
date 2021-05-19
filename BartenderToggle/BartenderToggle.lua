@@ -6,7 +6,7 @@ local function toggler()
     Bartender4.Bar.barregistry["4"]:SetVisibilityOption("always",not Bartender4.Bar.barregistry["4"]:GetVisibilityOption("always"))
     Bartender4.Bar.barregistry["MicroMenu"]:SetVisibilityOption("always",not Bartender4.Bar.barregistry["MicroMenu"]:GetVisibilityOption("always"))
 
-    if select(2, UnitClass("player")) == "PALADIN" or select(2, UnitClass("player")) == "WARRIOR" or select(2, UnitClass("player")) == "DRUID" then
+    if select(2, UnitClass("player")) == "PALADIN" or select(2, UnitClass("player")) == "WARRIOR" or select(2, UnitClass("player")) == "DRUID" or select(2, UnitClass("player")) == "DEATHKNIGHT" then
         Bartender4.Bar.barregistry["StanceBar"]:SetVisibilityOption("always",not Bartender4.Bar.barregistry["StanceBar"]:GetVisibilityOption("always"))
     end
 

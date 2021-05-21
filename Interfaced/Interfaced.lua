@@ -24,7 +24,11 @@ local main = function()
     CastingBarFrameBorder:SetTexture(nil)
     CastingBarFrameFlash:SetTexture(nil)
     CastingBarFrame:ClearAllPoints()
-    CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, -40)
+    if select(2, UnitClass("player")) == "DEATHKNIGHT" then
+        CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, 60)
+    else
+        CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, -40)
+    end
     CastingBarFrame.SetPoint = function() end
 end
 

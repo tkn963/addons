@@ -53,16 +53,16 @@ local function main()
         TotemFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 45, 48)
     end
 
-    CastingBarFrame:SetScale(0.65)
+    --CastingBarFrame:SetScale(0.65)
     CastingBarFrameBorder:SetTexture(nil)
     CastingBarFrameFlash:SetTexture(nil)
-    CastingBarFrame:ClearAllPoints()
-    if select(2, UnitClass("player")) == "DEATHKNIGHT" then
-        CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, 60)
-    else
-        CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, -40)
-    end
-    CastingBarFrame.SetPoint = function() end
+    --CastingBarFrame:ClearAllPoints()
+    --if select(2, UnitClass("player")) == "DEATHKNIGHT" then
+        --CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, 60)
+    --else
+        --CastingBarFrame:SetPoint("CENTER", PlayerFrame, "CENTER", 75, -40)
+    --end
+    --CastingBarFrame.SetPoint = function() end
 end
 
 local ef = CreateFrame("FRAME")

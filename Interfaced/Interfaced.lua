@@ -1,4 +1,4 @@
-local main = function()
+local function main()
     PlayerFrame:ClearAllPoints()
     PlayerFrame:SetPoint("CENTER", -350, 100)
 
@@ -32,7 +32,7 @@ local main = function()
     CastingBarFrame.SetPoint = function() end
 end
 
-local ef = CreateFrame("frame")
+local ef = CreateFrame("FRAME")
     ef:RegisterEvent("PLAYER_ENTERING_WORLD")
     ef:SetScript("OnEvent", function(self)
     main()
@@ -40,3 +40,6 @@ local ef = CreateFrame("frame")
     self:UnregisterEvent("PLAYER_ENTERING_WORLD")
     self:SetScript("OnEvent", nil)
 end)
+
+SLASH_UPDATEUI1 = "/updateui"
+SlashCmdList["UPDATEUI"] = main

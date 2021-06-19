@@ -115,9 +115,11 @@ function mod:TeleportToBalcony()
     self:DelayedMessage("teleport", timebalcony - 10, L["backwarn2"], "Urgent")
 
     self:Bar("wave", L["wave1bar"], wave1time, "Spell_ChargePositive")
+
     self:Bar("wave", L["wave2bar"], wave2time, "Spell_ChargePositive")
-    self:Bar("wave", L["wave3bar"], wave3time, "Spell_ChargePositive")
     self:DelayedMessage("wave", wave2time - 10, L["wave2_message"], "Urgent")
+
+    self:Bar("wave", L["wave3bar"], wave3time, "Spell_ChargePositive")
     self:DelayedMessage("wave", wave3time - 10, L["wave3_message"], "Urgent")
 
     self:ScheduleTimer("TeleportToRoom", timebalcony)
